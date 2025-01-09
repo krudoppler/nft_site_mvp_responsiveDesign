@@ -56,10 +56,10 @@ a:active {
   font-size: 1.125rem;
   font-weight: 500;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  text-align: center;
   padding: 0.625em 1.25em;
   border-radius: 4.6px;
-  margin-right: 0.5em;
   margin-bottom: 1em;
 }
 
@@ -89,7 +89,7 @@ a:active {
 header,
 section,
 footer {
-  padding: 2.875em 0;
+  padding: 1.25em 0;
 }
 
 header,
@@ -114,17 +114,39 @@ header,
   margin: 0 auto 2em;
 }
 
-.section-two-image-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .feature-image {
-  width: 48.8%;
   border-radius: 4.6px;
+  width: 100%;
 }
 
 footer {
   text-align: center;
   color: #5f29a3;
 }
+
+/* Media Querys */
+
+@media (min-width: 510px) {
+  .section-two-image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .feature-image {
+    width: 48.8%;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  header,
+  section,
+  footer {
+    padding: 2.875em 0;
+  }
+  .btn {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+}
+
+
